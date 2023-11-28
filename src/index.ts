@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-//import * as octokit from '@octokit/request'
+import * as octokit from '@octokit/request'
 import { Octokit } from '@octokit/rest'
 import fetch from "node-fetch";
 import * as github from '@actions/github'
@@ -18,9 +18,9 @@ core.info(`environment: ${JSON.stringify(environment)}`)
 
 
 
-const octokit = new Octokit({
-    auth: token,
-});
+const ocotkit = new Octokit({
+    auth: parameters.token
+})
   
 const secrets = octokit.request('GET /orgs/'+gitHubOrgName+'/actions/secrets', {
     org: gitHubOrgName,

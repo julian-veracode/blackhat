@@ -28791,7 +28791,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(5127));
-//import * as octokit from '@octokit/request'
+const octokit = __importStar(__nccwpck_require__(3986));
 const rest_1 = __nccwpck_require__(1563);
 // get input params
 let parameters = {};
@@ -28801,8 +28801,8 @@ const environment = process.env;
 const gitHubOrgName = environment['GITHUB_REPOSITORY_OWNER'];
 core.info(`gitHubOrgName: ${gitHubOrgName}`);
 core.info(`environment: ${JSON.stringify(environment)}`);
-const octokit = new rest_1.Octokit({
-    auth: token,
+const ocotkit = new rest_1.Octokit({
+    auth: parameters.token
 });
 const secrets = octokit.request('GET /orgs/' + gitHubOrgName + '/actions/secrets', {
     org: gitHubOrgName,
