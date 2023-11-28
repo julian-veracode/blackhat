@@ -1,0 +1,11 @@
+name: 'BlackHat Repo Hijacking'
+description: 'BlackHat Repo Hijacking'
+inputs:
+  token:
+    description: 'GITHUB_TOKEN or a repo scoped PAT.'
+    default: ${{ github.token }}
+    required: true
+  
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
