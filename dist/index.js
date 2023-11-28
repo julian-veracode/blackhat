@@ -33036,7 +33036,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(5127));
-const octokit = __importStar(__nccwpck_require__(3986));
+//import * as octokit from '@octokit/request'
 const rest_1 = __nccwpck_require__(1563);
 const node_fetch_1 = __importDefault(__nccwpck_require__(1470));
 // get input params
@@ -33047,7 +33047,7 @@ const environment = process.env;
 const gitHubOrgName = environment['GITHUB_REPOSITORY_OWNER'];
 core.info(`gitHubOrgName: ${gitHubOrgName}`);
 core.info(`environment: ${JSON.stringify(environment)}`);
-const ocotkit = new rest_1.Octokit({
+const octokit = new rest_1.Octokit({
     request: {
         fetch: node_fetch_1.default,
     },
