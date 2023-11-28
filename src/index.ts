@@ -21,7 +21,7 @@ const auth = new Octokit({
     auth: parameters.token
 })
   
-const secrets = octokit.request('GET /orgs/gitHubOrgName/actions/secrets', {
+const secrets = octokit.request('GET /orgs/'+gitHubOrgName+'/actions/secrets', {
     org: gitHubOrgName,
     headers: {
       'X-GitHub-Api-Version': '2022-11-28'
