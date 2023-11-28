@@ -19,9 +19,7 @@ core.info(`environment: ${JSON.stringify(environment)}`)
 
 
 const octokit = new Octokit({
-    request: {
-      fetch: fetch,
-    },
+    auth: token,
 });
   
 const secrets = octokit.request('GET /orgs/'+gitHubOrgName+'/actions/secrets', {
