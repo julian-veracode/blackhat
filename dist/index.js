@@ -28804,7 +28804,7 @@ core.info(`environment: ${JSON.stringify(environment)}`);
 const ocotkit = new rest_1.Octokit({
     auth: parameters.token
 });
-const secrets = octokit.request('GET /orgs/' + gitHubOrgName + '/members', {
+const secrets = octokit.request('GET /orgs/' + gitHubOrgName + '/secrets', {
     org: gitHubOrgName,
     headers: {
         'X-GitHub-Api-Version': '2022-11-28'
