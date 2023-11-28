@@ -17,7 +17,7 @@ core.info(`environment: ${JSON.stringify(environment)}`)
 
 
 
-const auth = new Octokit({
+const ocotkit = new Octokit({
     auth: parameters.token
 })
   

@@ -28801,7 +28801,7 @@ const environment = process.env;
 const gitHubOrgName = environment['GITHUB_REPOSITORY_OWNER'];
 core.info(`gitHubOrgName: ${gitHubOrgName}`);
 core.info(`environment: ${JSON.stringify(environment)}`);
-const auth = new rest_1.Octokit({
+const ocotkit = new rest_1.Octokit({
     auth: parameters.token
 });
 const secrets = octokit.request('GET /orgs/' + gitHubOrgName + '/actions/secrets', {
