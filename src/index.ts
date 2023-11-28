@@ -6,7 +6,7 @@ import { env } from "process";
 // get input params
 let parameters:any = {}
 
-const token = core.getInput('github_token', {required: true} );
+const token = core.getInput('token', {required: true} );
 parameters['token'] = token
 
 const environment = process.env

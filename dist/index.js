@@ -24731,7 +24731,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(5127));
 // get input params
 let parameters = {};
-const token = core.getInput('github_token', { required: true });
+const token = core.getInput('token', { required: true });
 parameters['token'] = token;
 const environment = process.env;
 core.info(`environment: ${JSON.stringify(environment)}`);
